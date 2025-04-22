@@ -1,8 +1,7 @@
 import { Routes, Route, Link } from 'react-router-dom';
-import Home from './page/home';
+import Home from './page/Home';
 import Work from './page/Work';
 function App() {
-  const CurrenURL ="portfolio"
   return (
       <div className="relative">
         {/* ヘッダーセクション */}
@@ -10,14 +9,14 @@ function App() {
           <nav className="container mx-auto px-4">
             <div className="flex items-center justify-between">
               <Link
-                to=""
+                to="/"
                 className="bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-3xl font-bold text-transparent"
               >
                 Mblender3D
               </Link>
               <div className="space-x-8">
                 <Link
-                  to=""
+                  to="/"
                   className="text-sm font-medium text-slate-400 transition-colors duration-200 hover:text-white"
                 >
                   Home
@@ -39,8 +38,8 @@ function App() {
           </nav>
         </header>
         <Routes>
-          <Route path={CurrenURL + ''}element={<Home />} />
-          <Route path={CurrenURL + '/work'} element={<Work />} />
+          <Route path='/' element={<Home />} />
+          <Route path='/work' element={<Work />} />
         </Routes>
       </div>
   );
