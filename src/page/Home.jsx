@@ -3,10 +3,9 @@ import Card1 from "../assets/Cube.png";
 import Card2 from "../assets/Website.png";
 import Card3 from "../assets/Webapp.png";
 import Works from "../assets/work.png";
-
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { Link, Navigate, useNavigate } from "react-router-dom";
 AOS.init();
 export default function Home() {
   const navigate = useNavigate();
