@@ -2,6 +2,7 @@ import { Routes, Route, Link } from 'react-router-dom';
 import Home from './page/home';
 import Work from './page/Work';
 function App() {
+  const CurrenURL ="portfolio"
   return (
       <div className="relative">
         {/* ヘッダーセクション */}
@@ -38,8 +39,8 @@ function App() {
           </nav>
         </header>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/work" element={<Work />} />
+          <Route path={CurrenURL + '/'}element={<Home />} />
+          <Route path={CurrenURL + '/work'} element={<Work />} />
         </Routes>
       </div>
   );
