@@ -1,6 +1,7 @@
 import { Routes, Route, Link } from 'react-router-dom';
 import Home from './page/Home';
 import Work from './page/Work';
+import ScrollToTop from './component/ScrollToTop';
 function App() {
   return (
       <div className="relative">
@@ -21,22 +22,23 @@ function App() {
                 >
                   Home
                 </Link>
-                <a href='#about' className="text-sm font-medium text-slate-400 transition-colors duration-200 hover:text-white">
-                  About
-                </a>
-                <a href='#skills' className="text-sm font-medium text-slate-400 transition-colors duration-200 hover:text-white">
-                  Skills
-                </a>
                 <Link
                   to="/work"
                   className="text-sm font-medium text-slate-400 transition-colors duration-200 hover:text-white"
                 >
-                  Contact
+                  Work
                 </Link>
+                <a href="https://www.instagram.com/ma___pocky/" target='_blank' rel="noopener noreferrer" className="text-sm font-medium text-slate-400 transition-colors duration-200 hover:text-white">
+                  Instagram
+                </a>
+                <a href="https://twitter.com/mblender3d" target='_blank' rel="noopener noreferrer" className="text-sm font-medium text-slate-400 transition-colors duration-200 hover:text-white">
+                  Twitter
+                </a>
               </div>
             </div>
           </nav>
         </header>
+        <ScrollToTop />
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/work' element={<Work />} />
