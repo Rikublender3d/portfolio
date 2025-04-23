@@ -13,9 +13,8 @@ import Twelve from '../assets/works/twelve.png';
 import Thirteen from '../assets/works/thirteen.png';
 export default function Work() {
   return (
-    <div>
-
-      <h1 className="text-3xl font-bold text-center mt-10">Works</h1>
+    <div className="text-center">
+      <h1 className="text-3xl font-bold text-center mt-12">Works</h1>
       <p className="text-lg text-center text-gray-600">
         ここでは、私の作品やプロジェクトを紹介します。
       </p>
@@ -52,7 +51,7 @@ export default function Work() {
 
           },
         ].map((feature, i) => (
-          <div key={i} className="mt-10" data-aos="fade-up" data-aos-duration="1000">
+          <div key={i} className="my-10" data-aos="fade-up" data-aos-duration="1000">
             <div className="bg-white shadow-md rounded-lg p-6">
               <img
                 src={feature.image}
@@ -71,7 +70,6 @@ export default function Work() {
           </div>
         ))}
       </div>
-
       <h2 className='my-4 text-lg text-center text-gray-600'>個人制作</h2>
       <div className="container mx-auto px-4 mt-10 flex items-center grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {[
@@ -107,7 +105,7 @@ export default function Work() {
           },
 
         ].map((feature, i) => (
-          <div key={i} className="mt-10" data-aos="fade-up" data-aos-duration="1000">
+          <div key={i} className="my-10" data-aos="fade-up" data-aos-duration="1000">
             <div className="bg-white shadow-md rounded-lg p-6">
               <img
                 src={feature.image}
@@ -164,7 +162,7 @@ export default function Work() {
             link: 'https://rikublender3d.github.io/',
           },
         ].map((feature, i) => (
-          <div key={i} className="mt-10" data-aos="fade-up" data-aos-duration="1000">
+          <div key={i} className="my-10" data-aos="fade-up" data-aos-duration="1000">
             <div className="bg-white shadow-md rounded-lg p-6">
               <img
                 src={feature.image}
@@ -227,7 +225,7 @@ export default function Work() {
             link: 'https://rikublender3d.github.io/calendar/',
           },
         ].map((feature, i) => (
-          <div key={i} className="mt-10" data-aos="fade-up" data-aos-duration="1000">
+          <div key={i} className="my-10 " data-aos="fade-up" data-aos-duration="1000">
             <div className="bg-white shadow-md rounded-lg p-6">
               <img
                 src={feature.image}
