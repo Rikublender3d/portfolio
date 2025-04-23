@@ -1,6 +1,7 @@
 import { Routes, Route, Link } from 'react-router-dom';
 import Home from './page/Home';
 import Work from './page/Work';
+import Aboutme from './page/aboutme';
 import ScrollToTop from './component/ScrollToTop';
 function App() {
   return (
@@ -22,6 +23,13 @@ function App() {
                 >
                   Home
                 </Link>
+
+                <Link 
+                to= "/aboutme"
+                className="text-sm font-medium text-slate-400 transition-colors duration-200 hover:text-white"
+                >
+                  About Me
+                </Link>
                 <Link
                   to="/work"
                   className="text-sm font-medium text-slate-400 transition-colors duration-200 hover:text-white"
@@ -42,6 +50,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/work' element={<Work />} />
+          <Route path='/aboutme' element={<Aboutme />} />
         </Routes>
       </div>
   );

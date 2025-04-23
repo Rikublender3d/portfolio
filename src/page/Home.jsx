@@ -13,6 +13,9 @@ export default function Home() {
   const onClickPage = () => {
     navigate("/work");
   };
+  const onClickPage2 = () => {
+    navigate("/aboutme");
+  };
   return (
     <div className="relative">
       <div className="area w-full h-screen absolute bg-gradient-to-l from-[#8f94fb] to-[#4e54c8] -z-10">
@@ -29,7 +32,7 @@ export default function Home() {
           <li className="circle circle10"></li>
         </ul>
       </div>
-      <div className="mx-auto text-center fade-in" data-aos="fade-up" data-aos-duration="1000">
+      <div className="mx-auto text-center fade-up" data-aos="fade-up" data-aos-duration="1000">
         <div className="h-screen w-full flex justify-center items-center">
           <h2 className="p-3 bg-gradient-to-r from-purple-500 via-blue-500 to-purple-500 bg-clip-text text-6xl font-bold tracking-tight text-transparent">
             Mblender3D
@@ -38,7 +41,7 @@ export default function Home() {
         <h2 className="p-3 bg-gradient-to-r from-purple-500 via-blue-500 to-purple-500 bg-clip-text text-6xl font-bold tracking-tight text-transparent" id="about">
           Aboutme
         </h2>
-        <div className="max-w-5xl mx-auto mt-10 flex items-center justify-between gap-6 column-3" data-aos="fade-up" data-aos-duration="1000">
+        <div className="max-w-5xl mx-auto mt-10 flex items-center justify-between gap-6 column-3 fade-up" data-aos="fade-up" data-aos-duration="1000">
           <img src={Image} alt="Profile" className="rounded-full w-1/2 h-1/2" />
           <div className="text-left w-1/2">
             <h3 className="text-lg font-semibold text-gray-900">自己紹介</h3>
@@ -46,13 +49,15 @@ export default function Home() {
             <p className="mt-2 text-base text-gray-600">
               N高等学校在籍時に培ったプログラミングや3DCGスキルを活かし、WebサイトやWebアプリケーションの制作等を個人で手がけながら法人化を目指している。また、高校時代にXRを活用した教育事例に強い関心を持ち、その経験を通じて教育格差のない社会を実現するための活動に注力している。
             </p>
+            <button onClick={onClickPage2} className="mt-4 bg-gradient-to-r from-purple-500 via-blue-500 to-purple-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-opacity-50 disabled:opacity-50 disabled:cursor-not-allowed">
+            詳しくはこちら</button>
           </div>
         </div>
         <h2 className="p-3 bg-gradient-to-r from-purple-500 via-blue-500 to-purple-500 bg-clip-text text-6xl font-bold tracking-tight text-transparent mt-10" id="skills">
           Skills
         </h2>
         <div className="w-100 max-w-6xl mx-auto mt-10 flex items-center justify-evenly columns-3">
-          <div class="w-[30%] max-w-sm rounded overflow-hidden shadow-lg" data-aos="flip-up" data-aos-duration="500">
+          <div class="w-[30%] max-w-sm rounded overflow-hidden shadow-lg flip-up" data-aos="flip-up" data-aos-duration="500">
             <img class="w-2/3 mx-auto" src={Card1} alt="Sunset in the mountains"></img>
             <div class="px-6 py-4">
               <div class="font-bold text-xl mb-2">3DCG、ゲーム制作</div>
@@ -67,7 +72,7 @@ export default function Home() {
               <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
             </div>
           </div>
-          <div class="w-[30%] max-w-sm rounded overflow-hidden shadow-lg" data-aos="flip-up" data-aos-duration="1000">
+          <div class="w-[30%] max-w-sm rounded overflow-hidden shadow-lg flip-up" data-aos="flip-up" data-aos-duration="1000">
             <img class="w-2/3 mx-auto" src={Card2} alt="Sunset in the mountains"></img>
             <div class="px-6 py-4">
               <div class="font-bold text-xl mb-2">Webサイト制作</div>
@@ -82,7 +87,7 @@ export default function Home() {
               <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Wordpress</span>
             </div>
           </div>
-          <div class="w-[30%] max-w-sm rounded overflow-hidden shadow-lg" data-aos="flip-up" data-aos-duration="1500">
+          <div class="w-[30%] max-w-sm rounded overflow-hidden shadow-lg flip-up" data-aos="flip-up" data-aos-duration="1500">
             <img class="w-2/3 mx-auto" src={Card3} alt="Sunset in the mountains"></img>
             <div class="px-6 py-4">
               <div class="font-bold text-xl mb-2">Webアプリケーション制作</div>
@@ -101,7 +106,7 @@ export default function Home() {
         <h2 className="p-3 bg-gradient-to-r from-purple-500 via-blue-500 to-purple-500 bg-clip-text text-6xl font-bold tracking-tight text-transparent mt-10">
           Work
         </h2>
-        <div className="max-w-5xl mx-auto mt-10 flex items-center justify-between gap-6 column-3" data-aos="fade-up" data-aos-duration="1000">
+        <div className="max-w-5xl mx-auto mt-10 flex items-center justify-between gap-6 column-3 fade-up" data-aos="fade-up" data-aos-duration="1000">
           <img src={Works} alt="Profile" className=" w-1/2 h-1/2" />
           <div className="text-left w-1/2">
             <h3 className="text-lg font-semibold text-gray-900">Work</h3>

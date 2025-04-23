@@ -71,7 +71,8 @@ export default function Work() {
           </div>
         ))}
       </div>
-      <h2 className='text-lg text-center text-gray-600'>個人制作</h2>
+
+      <h2 className='my-4 text-lg text-center text-gray-600'>個人制作</h2>
       <div className="container mx-auto px-4 mt-10 flex items-center grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {[
           {
