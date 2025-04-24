@@ -39,7 +39,7 @@ export default function Home() {
           Aboutme
         </h2>
         <div className="max-w-5xl mx-auto mt-10 md:flex items-center justify-between gap-6 column-3 fade-up" data-aos="fade-up" data-aos-duration="1000">
-          <img src={Image} alt="Profile" className="px-5 rounded-full md:w-1/2 h-1/2" />
+          <img src={Image} alt="Profile" className="px-5 rounded-full md:w-1/2 h-1/2 object-covers" />
           <div className="md:text-left md:w-1/2">
             <h3 className="text-lg font-semibold text-gray-900">自己紹介</h3>
             <h4 className="">天野実来(早稲田大学人間科学部人間情報科学科1年)</h4>
