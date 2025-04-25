@@ -3,35 +3,55 @@ import Card1 from "../assets/Cube.png";
 import Card2 from "../assets/Website.png";
 import Card3 from "../assets/Webapp.png";
 import Works from "../assets/work.png";
-import {useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { useEffect, useState } from "react";
 AOS.init();
 export default function Home() {
+
+  const [stars, setStars] = useState([]);
+  useEffect(() => {
+    const generatedStars = [];
+    for (let i = 0; i < 200; i++) {
+      generatedStars.push({
+        id: i,
+        left: `${Math.random() * 100}vw`,
+        top: `${Math.random() * 100}vh`,
+        animationDuration: `${Math.random() * 3 + 1}s`,
+      });
+    }
+    setStars(generatedStars);
+  }, []);
+
   const navigate = useNavigate();
 
   const onClickPage = () => {
     navigate("/work");
   };
+  const onClickPage2 = () => {
+    navigate("/aboutme");
+  }
   return (
     <div className="relative">
-      <div className="area w-full h-screen absolute bg-gradient-to-l from-[#8f94fb] to-[#4e54c8] -z-10">
-        <ul className="circles relative w-full h-full overflow-hidden">
-          <li className="circle circle1"></li>
-          <li className="circle circle2"></li>
-          <li className="circle circle3"></li>
-          <li className="circle circle4"></li>
-          <li className="circle circle5"></li>
-          <li className="circle circle6"></li>
-          <li className="circle circle7"></li>
-          <li className="circle circle8"></li>
-          <li className="circle circle9"></li>
-          <li className="circle circle10"></li>
-        </ul>
+      <div className="absolute w-full h-screen bg-black overflow-hidden flex items-center justify-center">
+        <div className="absolute w-full h-screen bg-black overflow-hidden">
+          {stars.map(({ id, left, top, animationDuration }) => (
+            <div
+              key={id}
+              className="star"
+              style={{
+                left,
+                top,
+                animationDuration,
+              }}
+            />
+          ))}
+        </div>
       </div>
       <div className="mx-auto text-center fade-up" data-aos="fade-up" data-aos-duration="1000">
         <div className="h-screen w-full flex justify-center items-center">
-          <h2 className="p-3 bg-gradient-to-r from-purple-500 via-blue-500 to-purple-500 bg-clip-text text-6xl font-bold tracking-tight text-transparent">
+          <h2 className="z-10 p-3 bg-gradient-to-r from-purple-500 via-blue-500 to-purple-500 bg-clip-text text-6xl font-bold tracking-tight text-transparent">
             Mblender3D
           </h2>
         </div>
@@ -46,6 +66,8 @@ export default function Home() {
             <p className="px-5 mt-2 text-base text-gray-600">
               N高等学校在籍時に培ったプログラミングや3DCGスキルを活かし、WebサイトやWebアプリケーションの制作等を個人で手がけながら法人化を目指している。また、高校時代にXRを活用した教育事例に強い関心を持ち、その経験を通じて教育格差のない社会を実現するための活動に注力している。
             </p>
+            <button onClick={onClickPage2} className="mt-4 bg-gradient-to-r from-purple-500 via-blue-500 to-purple-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-opacity-50 disabled:opacity-50 disabled:cursor-not-allowed">
+              詳しくはこちら</button>
           </div>
         </div>
         <h2 className="p-3 bg-gradient-to-r from-purple-500 via-blue-500 to-purple-500 bg-clip-text text-6xl font-bold tracking-tight text-transparent mt-10" id="skills">
@@ -108,8 +130,8 @@ export default function Home() {
             <p className="mt-2 text-base text-gray-600">
               歴代の制作物をご覧いただけます。
             </p>
-          <button onClick={onClickPage} className="mt-4 bg-gradient-to-r from-purple-500 via-blue-500 to-purple-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-opacity-50 disabled:opacity-50 disabled:cursor-not-allowed">
-一覧はこちら</button>
+            <button onClick={onClickPage} className="mt-4 bg-gradient-to-r from-purple-500 via-blue-500 to-purple-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-opacity-50 disabled:opacity-50 disabled:cursor-not-allowed">
+              一覧はこちら</button>
           </div>
         </div>
       </div>
