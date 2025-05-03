@@ -102,6 +102,7 @@ export default function Work() {
               '#React+Vite',
             description2:
               '#共同開発',
+            link:"https://club-programming.github.io/"
           },
 
         ].map((feature, i) => (
