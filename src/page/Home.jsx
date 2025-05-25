@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect, useState } from "react";
+import Cursor from "../component/Cursor";
 AOS.init();
 export default function Home() {
 
@@ -34,6 +35,7 @@ export default function Home() {
   }
   return (
     <div className="relative">
+      <Cursor className="hidden md:block"/>
       <div className="absolute w-full h-screen bg-black overflow-hidden flex items-center justify-center">
         <div className="absolute w-full h-screen bg-black overflow-hidden">
           {stars.map(({ id, left, top, animationDuration }) => (
